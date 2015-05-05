@@ -7,10 +7,15 @@ GPIO.setmode(GPIO.BCM)
 
 app = Flask(__name__)
 
+# Explorer HAT uses GPIO 27 = red, 4 = blue, 5 = green
+# Pibrella uses GPIO 27 = red, 17 = yellow, 4 = green
+
+
+# Map of LED names and associated GPIO pins
 leds = {
-    'red':    22,
-    'blue':   23,
-    'green':  24
+    'red':    27,
+    'blue':   4,
+    'green':  5
 }
 
 for color in leds.keys():
