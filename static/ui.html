@@ -1,0 +1,49 @@
+<!doctype html>
+<html>
+  <head>
+    <title>RGB Web GUI</title>
+    <style type="text/css">
+        a {
+          display: block;
+          float: left;
+          text-align: center;
+          color: white;
+          line-height: 100px;
+          width: 200px;
+          height: 100px;
+          font-size: 20px;
+          margin: 5px;
+          text-decoration: none;
+	}
+	.red {background:red}
+	.blue {background:blue}
+	.green {background:green}
+    </style>
+  </head>
+  <body>
+    <a class="red"   href="/led/red/on">Turn Red LED ON</a>
+    <a class="red"   href="/led/red/off">Turn Red LED OFF</a>
+
+    <a class="blue"  href="/led/blue/on">Turn Blue LED ON</a>
+    <a class="blue"  href="/led/blue/off">Turn Blue LED OFF</a>
+
+    <a class="green" href="/led/green/on">Turn Green LED ON</a>
+    <a class="green" href="/led/green/off">Turn Green LED OFF</a>
+
+
+    <script type="text/javascript" src="http://code.jquery.com/jquery-1.11.3.min.js"></script>
+    <script type="text/javascript">
+      jQuery(document).ready(function(){ // Triggers when the document is ready
+
+        jQuery('a').on('click',function(e){ // Bind to the "Click" event of all a tags
+          e.preventDefault(); // Prevent leaving the page
+          jQuery.ajax({
+            url: jQuery(this).attr('href'),
+            cache: false
+          });
+        });
+
+      })
+    </script>
+  </body>
+</html>
