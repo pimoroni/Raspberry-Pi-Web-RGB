@@ -12,4 +12,4 @@ sudo python ./rgb.py
 
 And then visit:
 
-http://<your Pi address>:5000/ui.html
+http://[your Pi address>]:5000/ui.html
