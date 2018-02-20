@@ -1,8 +1,8 @@
-#Simple RGB LED Controller
+# Simple RGB LED Controller
 
 This example is a simple GPIO LED controller for the Raspberry Pi. It lets you turn a red, blue and green LED on and off through a Javascript/jQuery powered Web-interface.
 
-##Requirements
+## Requirements
 
 You'll need Python Flask installed to run this example, install with:
 
@@ -11,7 +11,7 @@ sudo apt-get install python-pip
 pip install flask
 ```
 
-##Running
+## Running
 
 Start up with:
 
